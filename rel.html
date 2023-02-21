@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>The Eucharist Quiz</title>
+  <style>
+    body {
+      background-color: #2c2e3a;
+      color: #cecfe4;
+      font-family: sans-serif;
+      padding-top: 3em;
+      text-align: center;
+    }
+
+    .button {
+      display: inline-block;
+      font-size: 30px;
+      padding: 15px 25px;
+      width: 20%;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      outline: none;
+      background-color: #3c3c4f;
+      border: none;
+      border-radius: 15px;
+    }
+
+    .button:hover {background-color: #4d4d65}
+
+    .button input[type="radio"] {
+      display: none;
+    }
+
+    .button input[type="radio"]:checked + span {
+      color: #67809d;
+    }
+
+    .button span {
+      display: inline-block;
+      padding: 0 10px;
+      line-height: 24px;
+    }
+  </style>
+  
+  <script>
+    var siteWidth = 400;
+    var scale = screen.width /siteWidth;
+    document.querySelector('meta[name="viewport"]').setAttribute('content', 'width='+siteWidth+', initial-scale='+scale+'');
+
+    var Qnum = 1;
+    var prevQnum = 0;
+    function Qnext() {
+      Qnum = Qnum + 1
+      prevQnum = prevQnum + 1
+
+      var a = document.getElementById("question" + Qnum);
+      a.style.display = "block";
+
+      var b = document.getElementById("question" + prevQnum);
+      b.style.display = "none";
+    }
+  </script>
+</head>
+
+<body>
+  <h1>The Eucharist Quiz</h1><br>
+
+  <!-- HTML for the questions -->
+  <form id='q1'>
+    <div id="question1">
+      <h2>Question 1</h2><br>
+      <label class="button">
+        <input type="radio" name="q1" value="1"><span>
+          1f1
+        </span>
+      </label>&nbsp &nbsp &nbsp &nbsp
+      <label class="button">
+        <input type="radio" name="q1" value="2"><span>
+          1f2
+        </span>
+      </label><br><br><br>
+      <label class="button">
+        <input type="radio" name="q1" value="3"><span>
+          1a
+        </span>
+      </label>&nbsp &nbsp &nbsp &nbsp
+      <label class="button">
+        <input type="radio" name="q1" value="4"><span>
+          1f3
+        </span>
+      </label><br><br>
+    </div>
+
+    <div id="question2" style="display:none">
+      <h2>Question 2</h2>
+      <label class="button">
+        <input type="radio" name="q1" value="1"><span>
+          2f1
+        </span>
+      </label>
+      <label class="button">
+        <input type="radio" name="q1" value="2"><span>
+          2f2
+        </span>
+      </label><br><br>
+      <label class="button">
+        <input type="radio" name="q1" value="3"><span>
+          2a
+        </span>
+      </label>
+      <label class="button">
+        <input type="radio" name="q1" value="4"><span>
+          2f3
+        </span>
+      </label><br>
+    </div>
+
+    <div id="question3" style="display:none">
+      <h2>Question 3</h2>
+      <label class="button">
+        <input type="radio" name="q1" value="1"><span>
+          3f1
+        </span>
+      </label>
+      <label class="button">
+        <input type="radio" name="q1" value="2"><span>
+          3f2
+        </span>
+      </label><br><br>
+      <label class="button">
+        <input type="radio" name="q1" value="3"><span>
+          3a
+        </span>
+      </label>
+      <label class="button">
+        <input type="radio" name="q1" value="4"><span>
+          3f3
+        </span>
+      </label><br>
+    </div>
+
+    <div id="question4" style="display:none">
+      <h2>Question 4</h2>
+      <label class="button">
+        <input type="radio" name="q1" value="1"><span>
+          4f1
+        </span>
+      </label>
+      <label class="button">
+        <input type="radio" name="q1" value="2"><span>
+          4f2
+        </span>
+      </label><br><br>
+      <label class="button">
+        <input type="radio" name="q1" value="3"><span>
+          4a
+        </span>
+      </label>
+      <label class="button">
+        <input type="radio" name="q1" value="4"><span>
+          4f3
+        </span>
+      </label><br>
+    </div>
+  </form>
+  <br><br>
+  <button onclick="Qnext()" style="color: #cecfe4;" class="button" >Next</button>  
+</body>
+</html>
